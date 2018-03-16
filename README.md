@@ -1,2 +1,2 @@
-# raja-singaravelu
-A website for Palanivel Raja Singaravelu to display his photography portfolio
+# jam-photography-site
+A website for displaying photography portfolio
