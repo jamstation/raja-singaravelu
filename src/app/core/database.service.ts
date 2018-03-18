@@ -19,7 +19,7 @@ export class DatabaseService
 				{ text: 'scenery' },
 				{ text: 'potrait' }
 			]
-		}
+		};
 	}
 
 	public getPortfolio (): string[]

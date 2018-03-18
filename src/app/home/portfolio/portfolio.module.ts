@@ -6,7 +6,8 @@ import { EffectsModule } from '@ngrx/effects';
 import
 {
 	MatIconModule,
-	MatButtonModule
+	MatButtonModule,
+	MatGridListModule
 } from '@angular/material';
 
 import { routes } from './portfolio.routes';
@@ -21,6 +22,7 @@ import { PortfolioReducer, PortfolioEffects } from './portfolio.store';
 		CommonModule,
 		MatIconModule,
 		MatButtonModule,
+		MatGridListModule,
 		RouterModule.forChild( routes ),
 		StoreModule.forFeature( 'portfolioState', PortfolioReducer ),
 		EffectsModule.forFeature( [ PortfolioEffects ] )

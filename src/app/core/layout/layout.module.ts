@@ -14,10 +14,7 @@ import { LayoutComponent } from './layout.component';
 		HomeModule
 	],
 	exports: [
-		LayoutComponent,
-		SidenavModule,
-		ToolbarModule,
-		HomeModule
+		LayoutComponent
 	]
 } )
 export class LayoutModule { }

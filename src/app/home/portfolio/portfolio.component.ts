@@ -22,7 +22,10 @@ export class PortfolioComponent
 
 		this.list$ = this.store.pipe(
 			select( state => state.portfolioState.list ),
-			map( list => list.map( item => 'url(' + item + ')' ) )
+			map( list => list.map( ( item, i ) => ( {
+				rowspan: i == 1 ? 2 : 1,
+				url: 'url(' + item + ')'
+			} ) ) )
 		);
 
 		this.title$ = this.store.pipe(

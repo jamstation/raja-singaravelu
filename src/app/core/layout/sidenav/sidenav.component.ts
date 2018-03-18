@@ -27,12 +27,15 @@ export class SidenavComponent implements OnInit, OnDestroy
 			select( state => state.layoutState.logoUrl ),
 			map( logoUrl => logoUrl ? 'url(' + logoUrl + ')' : '' ) );
 		this.navList = this.store.pipe(
-			select( state => state.layoutState.navList ) );
+			select( state => state.layoutState.navList )
+		);
 		this.sidebarToggled = this.store.pipe(
 			select( state => state.layoutState.sidebarToggled ),
-			skip( 1 ),
+			// skip( 1 ),
 			map( sidebarToggled => this.sidenav.toggle() ) );
+
 		this.store.dispatch( new LayoutActions.SelectNavItem() );
+
 	}
 
 	ngOnInit (): void

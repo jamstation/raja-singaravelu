@@ -14,9 +14,7 @@ import { CoreComponent } from './core.component';
 		HomeModule
 	],
 	exports: [
-		CoreComponent,
-		LayoutModule,
-		HomeModule
+		CoreComponent
 	],
 	providers: [
 		DatabaseService,

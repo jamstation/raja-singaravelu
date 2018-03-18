@@ -1,7 +1,16 @@
-<h2 class="title"> {{ title$ | async }} </h2>
-<section class="gallery stretch flex flex-start-start">
-	<div *ngFor="let item of list$ | async"
-		class="photo"
-		[style.backgroundImage]="item">
+<div class="container">
+	<div class="component stretch flex">
+		<main class="gallery stretch-horizontally flex flex-center-start vertical-scroll">
+			<mat-grid-list class="stretch-horizontally"
+				cols="4"
+				rowHeight="200px">
+				<mat-grid-tile *ngFor="let photo of list$ | async"
+					[rowspan]="photo.rowspan">
+					<div class="photo"
+						[style.backgroundImage]="photo.url">
+					</div>
+				</mat-grid-tile>
+			</mat-grid-list>
+		</main>
 	</div>
-</section>
+</div>

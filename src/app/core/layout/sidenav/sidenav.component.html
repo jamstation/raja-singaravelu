@@ -1,20 +1,17 @@
-<mat-sidenav-container
-	class="stretch">
-	<mat-sidenav
-		#sidenav
-		class="sidenav stretch-v"
-		mode="over">
+<mat-sidenav-container class="stretch">
+	<mat-sidenav #sidenav
+		class="sidenav"
+		mode="side">
 		<header>
-			<div
-				class="logo"
+			<!-- <div class="logo"
 				[style.backgroundImage]="logoUrl | async">
-			</div>
+			</div> -->
 		</header>
-		<main>
-			<nav>
+		<main class="stretch flex-vertical flex-center-center">
+			<nav class="nav-list">
 				<mat-nav-list>
-					<mat-list-item
-						*ngFor="let navItem of navList | async"
+					<mat-list-item *ngFor="let navItem of navList | async"
+					 	class="nav-list-item"
 						(click)="select( navItem )">
 						{{ navItem.text }}
 					</mat-list-item>
