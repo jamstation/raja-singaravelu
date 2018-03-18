@@ -1,0 +1,31 @@
+<mat-sidenav-container
+	class="stretch">
+	<mat-sidenav
+		#sidenav
+		class="sidenav stretch-v"
+		mode="over">
+		<header>
+			<div
+				class="logo"
+				[style.backgroundImage]="logoUrl | async">
+			</div>
+		</header>
+		<main>
+			<nav>
+				<mat-nav-list>
+					<mat-list-item
+						*ngFor="let navItem of navList | async"
+						(click)="select( navItem )">
+						{{ navItem.text }}
+					</mat-list-item>
+				</mat-nav-list>
+			</nav>
+		</main>
+		<footer>
+		</footer>
+	</mat-sidenav>
+	<mat-sidenav-content>
+		<ng-content>
+		</ng-content>
+	</mat-sidenav-content>
+</mat-sidenav-container>

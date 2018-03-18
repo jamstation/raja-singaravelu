@@ -1,0 +1,7 @@
+<h2 class="title"> {{ title$ | async }} </h2>
+<section class="gallery stretch flex flex-start-start">
+	<div *ngFor="let item of list$ | async"
+		class="photo"
+		[style.backgroundImage]="item">
+	</div>
+</section>

@@ -1,0 +1,11 @@
+<mat-toolbar color="primary" class="mat-toolbar-sleek">
+	<section class="menu-section">
+		<button mat-button
+			(click)="menuClick()">
+			<mat-icon class="animate-all"> menu </mat-icon>
+		</button>
+	</section>
+	<section class="title-section stretch flex flex-center-center">
+		{{ toolbarTitle | async }}
+	</section>
+</mat-toolbar>

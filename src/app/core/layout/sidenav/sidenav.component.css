@@ -1,0 +1,11 @@
+.sidenav {
+    min-width: 200px;
+}
+
+.logo {
+	width: 80%;
+    height: 150px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
